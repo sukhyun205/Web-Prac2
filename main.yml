@@ -42,7 +42,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    runs-on: [ self-hosted, label-go ]
+    runs-on: [ self-hosted, label-go ] #label-go를 붙여줬기때문에 cmd runner설정에서 Enter any additional labels에 label-go를 입력해야함
     steps:
       - name: Login to ghcr
         uses: docker/login-action@v1
